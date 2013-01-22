@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Facebook App</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Facebook Apps</value>
+    </caseValues>
+    <fields>
+        <help><!-- Also know as the Application ID --></help>
+        <label><!-- App ID --></label>
+        <name>clientID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Also known as Application Secret --></help>
+        <label><!-- App Secret --></label>
+        <name>clientSecret__c</name>
+    </fields>
+    <fields>
+        <help><!-- When a Facebook user authorizes your application, your application gets access to the user&apos;s data. By default, your application can access all public data in a user&apos;s profile. If you need to access other data you must request additional permissions. --></help>
+        <label><!-- Permissions --></label>
+        <name>permissions__c</name>
+        <picklistValues>
+            <masterLabel>ads_management</masterLabel>
+            <translation><!-- ads_management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>create_event</masterLabel>
+            <translation><!-- create_event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>email</masterLabel>
+            <translation><!-- email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_about_me</masterLabel>
+            <translation><!-- friends_about_me --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_activities</masterLabel>
+            <translation><!-- friends_activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_birthday</masterLabel>
+            <translation><!-- friends_birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_checkins</masterLabel>
+            <translation><!-- friends_checkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_education_history</masterLabel>
+            <translation><!-- friends_education_history --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_events</masterLabel>
+            <translation><!-- friends_events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_groups</masterLabel>
+            <translation><!-- friends_groups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_hometown</masterLabel>
+            <translation><!-- friends_hometown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_interests</masterLabel>
+            <translation><!-- friends_interests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_likes</masterLabel>
+            <translation><!-- friends_likes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_location</masterLabel>
+            <translation><!-- friends_location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_notes</masterLabel>
+            <translation><!-- friends_notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_online_presence</masterLabel>
+            <translation><!-- friends_online_presence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_photo_video_tags</masterLabel>
+            <translation><!-- friends_photo_video_tags --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_photos</masterLabel>
+            <translation><!-- friends_photos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_questions</masterLabel>
+            <translation><!-- friends_questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_relationship_details</masterLabel>
+            <translation><!-- friends_relationship_details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_relationships</masterLabel>
+            <translation><!-- friends_relationships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_religion_politics</masterLabel>
+            <translation><!-- friends_religion_politics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_status</masterLabel>
+            <translation><!-- friends_status --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_videos</masterLabel>
+            <translation><!-- friends_videos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_website</masterLabel>
+            <translation><!-- friends_website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>friends_work_history</masterLabel>
+            <translation><!-- friends_work_history --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>manage_friendlists</masterLabel>
+            <translation><!-- manage_friendlists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>manage_notifications</masterLabel>
+            <translation><!-- manage_notifications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>manage_pages</masterLabel>
+            <translation><!-- manage_pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>offline_access</masterLabel>
+            <translation><!-- offline_access --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>publish_actions</masterLabel>
+            <translation><!-- publish_actions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>publish_checkins</masterLabel>
+            <translation><!-- publish_checkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>publish_stream</masterLabel>
+            <translation><!-- publish_stream --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>read_friendlists</masterLabel>
+            <translation><!-- read_friendlists --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>read_insights</masterLabel>
+            <translation><!-- read_insights --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>read_mailbox</masterLabel>
+            <translation><!-- read_mailbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>read_requests</masterLabel>
+            <translation><!-- read_requests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>read_stream</masterLabel>
+            <translation><!-- read_stream --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>rsvp_event</masterLabel>
+            <translation><!-- rsvp_event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_about_me</masterLabel>
+            <translation><!-- user_about_me --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_activities</masterLabel>
+            <translation><!-- user_activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_birthday</masterLabel>
+            <translation><!-- user_birthday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_checkins</masterLabel>
+            <translation><!-- user_checkins --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_education_history</masterLabel>
+            <translation><!-- user_education_history --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_events</masterLabel>
+            <translation><!-- user_events --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_groups</masterLabel>
+            <translation><!-- user_groups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_hometown</masterLabel>
+            <translation><!-- user_hometown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_interests</masterLabel>
+            <translation><!-- user_interests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_likes</masterLabel>
+            <translation><!-- user_likes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_location</masterLabel>
+            <translation><!-- user_location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_notes</masterLabel>
+            <translation><!-- user_notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_online_presence</masterLabel>
+            <translation><!-- user_online_presence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_photo_video_tags</masterLabel>
+            <translation><!-- user_photo_video_tags --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_photos</masterLabel>
+            <translation><!-- user_photos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_questions</masterLabel>
+            <translation><!-- user_questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_relationship_details</masterLabel>
+            <translation><!-- user_relationship_details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_relationships</masterLabel>
+            <translation><!-- user_relationships --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_religion_politics</masterLabel>
+            <translation><!-- user_religion_politics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_status</masterLabel>
+            <translation><!-- user_status --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_videos</masterLabel>
+            <translation><!-- user_videos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_website</masterLabel>
+            <translation><!-- user_website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>user_work_history</masterLabel>
+            <translation><!-- user_work_history --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>xmpp_login</masterLabel>
+            <translation><!-- xmpp_login --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Facebook App Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Set_App_Secret --></label>
+        <name>Set_App_Secret</name>
+    </webLinks>
+</CustomObjectTranslation>
