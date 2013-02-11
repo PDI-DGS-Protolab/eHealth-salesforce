@@ -136,6 +136,7 @@ global with sharing class FacebookSampleController extends FacebookLoginControll
     	return null;
     }
     
+    
     static testMethod void testController() {
     	// TODO
     }
