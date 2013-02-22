@@ -1,7 +1,7 @@
 <apex:page controller="FacebookSampleController" action="{!login}" 
   cache="false" sidebar="false" showHeader="false" 
   title="Force.com Toolkit for Facebook - Sample Page">
-    <apex:stylesheet value="{!URLFOR($Resource.style)}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.styleOld)}"/>
     <script src="{!$Resource.jquery}"></script>
     <script src="{!$Resource.html_sanitizer}"></script>
     <script>
@@ -36,7 +36,7 @@
     <br/>
     <h2>Sample Page</h2>&nbsp;&nbsp;<apex:outputLink value="FacebookTestUser">Test User Connections</apex:outputLink>
     <p>This page shows you how to use the Force.com Toolkit for Facebook.</p>
-    
+           
     <h2>{!me.name}</h2>
     <br/>
     <c:FacebookProfilePicture fbid="{!me.id}" width="120" height="120" type="large"/>
@@ -50,6 +50,8 @@
     </apex:form>
     <br/>
     
+      
+      
     <apex:form >
         <h2>Your Feed</h2>&nbsp;&nbsp;<apex:commandButton value="Refresh" rerender="posts"/>
         <apex:outputPanel id="posts">

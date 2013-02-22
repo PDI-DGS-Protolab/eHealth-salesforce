@@ -1,0 +1,57 @@
+<apex:page standardcontroller="Contact" extensions="PDICustomerPortalController" action="{!login}" cache="false" sidebar="false" showHeader="false" standardstylesheets="false" title="PDI Customer Portal"> 
+    <style>
+        .dateFormat{display:none;}
+    </style>
+    <apex:stylesheet value="{!URLFOR($Resource.resources,'resources/styles/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.resources,'resources/styles/commons_fonts.css')}"/>
+    <script src="{!$Resource.jquery}"></script>
+    <script src="{!$Resource.html_sanitizer}"></script>
+    
+    <div class="general">
+    
+        <header class="header">
+            <h1 class="titlePage"><apex:image styleclass="logo" value="{!URLFOR($Resource.resources,'resources/images/lgo_telefonica_main.gif')}" />Customer Portal</h1>
+        </header>
+        
+        <div class="separator"></div>
+            <nav>
+                <ul>
+                    <li class="menu" id="home"><a title="Ir ao Início" href="https://oil-developer-edition.na14.force.com/"></a></li>
+                    <li class="menu" id="separator"> </li>
+                    <li class="menu" id="profilemenu"><a title="Ir para Editar seu perfil" href="https://oil-developer-edition.na14.force.com/">Perfil</a></li>
+                </ul>
+            </nav>
+        <div class="separator"></div>
+        
+        <div class="session">
+            <div id="fbimg"><c:FacebookProfilePicture fbid="{!me.id}" type="normal" /></div>
+            <p class="session" id="session">{!contact.name}</p>
+        </div>
+
+        <section>
+            <article>
+                <h2 id="welcome">Edite o seu perfil </h2>
+
+                <apex:form styleClass="aprofile">
+                    <p class="profile">Nome <br /><apex:inputField value="{!contact.firstname}" styleClass="form text"/></p>
+                    <p class="profile">Sobrenome <apex:inputField value="{!contact.lastname}" styleClass="form text special"/></p>
+                    <p class="profile">Data de nascimiento (mm/dd/aa) <br /><apex:inputField value="{!contact.birthdate}" styleClass="form stext"/></p>
+                    <p class="profile">E-mail <br /><apex:inputField value="{!contact.email}" styleClass="form text"/></p>
+                    <p class="profile">Endereço <br /><apex:inputField value="{!contact.mailingstreet}" styleClass="form text"/></p>
+                    <p class="profile">CEF <br /><apex:inputField value="{!contact.MailingPostalCode}" styleClass="form stext"/></p>
+                    <p class="profile" style="clear: both;">Cidade <br /><apex:inputField value="{!contact.MailingCity}" styleClass="form stext"/></p>
+                    <p class="profile">País <br /><apex:inputField value="{!contact.MailingCountry}" styleClass="form stext"/></p>
+                    <p class="profile">Telefone <br /><apex:inputField value="{!contact.phone}" styleClass="form stext"/></p>
+                    <p class="profile">Celular <br /><apex:inputField value="{!contact.mobilephone}" styleClass="form stext"/></p>
+                    <p>
+                    <apex:commandButton action="{!save}" value="Salvar" styleClass="button hire save" style="float:left;"/>
+                    </p>
+                </apex:form>
+            </article>
+        </section>
+
+        <footer class="footer">
+            <p class="foot">&copy; Telefonica Digital and Open Innovation Lab (UPM), 2013</p>
+        </footer>
+    </div>
+</apex:page>

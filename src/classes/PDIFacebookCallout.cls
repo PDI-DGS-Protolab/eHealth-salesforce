@@ -8,11 +8,11 @@ public class PDIFacebookCallout {
         String stoken = FacebookCrypto.decrypt(token);
         FacebookUser user = new FacebookUser(stoken, 'me');
         
-		PDIContactsManager cm = new PDIContactsManager();
+		PDIContactsManager cm = new PDIContactsManager();        
 
 		try {
 			// The contact already existed on the database
-			cm.updateContact(user);
+			cm.retrieveContact(user.id);
 			
 		} catch (System.QueryException e) {		// Creating a new contact
 			cm.insertContact(user);

@@ -1,51 +1,48 @@
-<apex:page controller="PDIHomeController" action="{!login}" cache="false" sidebar="false" showHeader="false" title="PDI Home Page">
-    <apex:stylesheet value="{!URLFOR($Resource.style)}"/>
+<apex:page controller="PDIHomeController" action="{!login}" cache="false" sidebar="false" showHeader="false" standardstylesheets="false" title="PDI Home Page">
+    <apex:stylesheet value="{!URLFOR($Resource.resources,'resources/styles/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.resources,'resources/styles/commons_fonts.css')}"/>
     <script src="{!$Resource.jquery}"></script>
     <script src="{!$Resource.html_sanitizer}"></script>
-    <script>
-        var $j = jQuery.noConflict();
+    
+    <div class="general">
+    
+        <header class="header">
+            <h1 class="titlePage"><apex:image styleclass="logo" value="{!URLFOR($Resource.resources,'resources/images/lgo_telefonica_main.gif')}" />Marketing Portal</h1>
+        </header>
         
-        function getFriends() {
-        	// Show the throbber
-            $j("#friends").html('<img src="{!$Resource.ajax}" width="16" height="11"/>');
-            
-            // The remote method can't get the access token via the cookie, so we
-            // get it from an action method and pass it here
-            FacebookSampleController.getFriends('{!accessToken}', function(result, event) {
-                if (event.status) {
-                    // result comes back escaped - use Caja to unescape it
-                    var json = html.unescapeEntities(result);
-                    var friends = JSON.parse(json);
-                    // Truncate the array to a maximum of 10 friends
-                    friends.data.length = Math.min(10, friends.data.length);
-                    $j("#friends").html('<pre>'+JSON.stringify(friends, null, '    ')+'</pre>');
-                } else {
-                    alert(event.message + '\n' + JSON.stringify(event));
-                }
-            });
-        }
+        <div class="separator"></div>
+            <nav>
+                <ul>
+                    <li class="menu" id="home"><a title="Ir ao Início" href="https://oil-developer-edition.na14.force.com/"></a></li>
+                    <li class="menu" id="separator"> </li>
+                    <li class="menu" id="profilemenu"><a title="Ir para Editar seu perfil" href="https://oil-developer-edition.na14.force.com/CustomerPortal">Perfil</a></li>
+                </ul>
+            </nav>
+        <div class="separator"></div>
         
-        function showUserDataThrobber() {
-            $j("#user").html('<img src="{!$Resource.ajax}" width="16" height="11"/>');
-        }
-    </script>
-      
-    <h1>Marketing Dummy Portal</h1>
-    <br />
-    
-    <h2>Welcome {!me.name} to the eHealth Service</h2>
-    <br />
-    <br/>
-      
-    <c:FacebookProfilePicture fbid="{!me.id}" width="120" height="120" type="normal"/>
-    <br/>
-    <br/>
-    
-    <apex:form >
-		<apex:commandButton action="{!basicAuthCallout}" value="Hire"/>
-    </apex:form>
-      
-      
-    <br/>
-    
+        <div class="session">
+            <div id="fbimg"><c:FacebookProfilePicture fbid="{!me.id}" type="normal" /></div>
+            <p class="session" id="session">{!me.name}</p>
+        </div>
+
+        <section>
+            <article>
+                <h2 id="welcome">Bem-vindo {!me.first_name} para o Serviço de eHealth</h2>
+                <apex:image styleclass="description" value="{!URLFOR($Resource.resources,'resources/images/ehealth.jpg')}" />
+                <p>Confiança é ter com quem contar.</p>
+
+                <p>A cada minuto uma pessoa da região recebe atendimento através do Myhealth. A cada ano são realizadas 20.000 consultas médicas, 1000 internações, além de 60.000 exames complementares.</p>
+
+                <p>São mais de trinta mil clientes que podem escolher seu médico de confiança entre mais de 100 profissionais. Realizar os exames de que necessitam. Assim como uma criança se sente protegida ao segurar com força a mão de seu pai, o cliente Bensaúde sabe a quem confiar seu bem mais precioso: A vida.</p>
+        
+                <apex:form >
+                    <apex:commandButton action="{!basicAuthCallout}" value="Contratar" styleClass="button hire"/>
+                </apex:form>
+            </article>
+        </section>
+
+        <footer class="footer">
+            <p class="foot">&copy; Telefonica Digital and Open Innovation Lab (UPM), 2013</p>
+        </footer>
+    </div>
 </apex:page>

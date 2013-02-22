@@ -1,0 +1,51 @@
+<apex:page controller="PDIHomeController" action="{!login}" cache="false" sidebar="false" showHeader="false" title="PDI Home Page">
+    <apex:stylesheet value="{!URLFOR($Resource.style)}"/>
+    <script src="{!$Resource.jquery}"></script>
+    <script src="{!$Resource.html_sanitizer}"></script>
+    <script>
+        var $j = jQuery.noConflict();
+        
+        function getFriends() {
+            // Show the throbber
+            $j("#friends").html('<img src="{!$Resource.ajax}" width="16" height="11"/>');
+            
+            // The remote method can't get the access token via the cookie, so we
+            // get it from an action method and pass it here
+            FacebookSampleController.getFriends('{!accessToken}', function(result, event) {
+                if (event.status) {
+                    // result comes back escaped - use Caja to unescape it
+                    var json = html.unescapeEntities(result);
+                    var friends = JSON.parse(json);
+                    // Truncate the array to a maximum of 10 friends
+                    friends.data.length = Math.min(10, friends.data.length);
+                    $j("#friends").html('<pre>'+JSON.stringify(friends, null, '    ')+'</pre>');
+                } else {
+                    alert(event.message + '\n' + JSON.stringify(event));
+                }
+            });
+        }
+        
+        function showUserDataThrobber() {
+            $j("#user").html('<img src="{!$Resource.ajax}" width="16" height="11"/>');
+        }
+    </script>
+      
+    <h1>Marketing Dummy Portal</h1>
+    <br />
+    
+    <h2>Welcome {!me.name} to the eHealth Service</h2>
+    <br />
+    <br/>
+      
+    <c:FacebookProfilePicture fbid="{!me.id}" width="120" height="120" type="normal"/>
+    <br/>
+    <br/>
+    
+    <apex:form >
+        <apex:commandButton action="{!basicAuthCallout}" value="Hire"/>
+    </apex:form>
+      
+      
+    <br/>
+    
+</apex:page>

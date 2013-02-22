@@ -5,7 +5,7 @@ public class PDIContactsManager {
 
 	public Contact retrieveContact(String fbid) {
 		
-		Contact c = [SELECT Id, FirstName, LastName, Email, Birthdate, MailingCity, MailingCountry, FacebookId__c, ProfilePictureLink__c, Gender__c, AccountId, TefAccount__c 
+		Contact c = [SELECT Id, Name, FirstName, LastName, Email, Birthdate, MailingCity, MailingCountry, MailingPostalCode, MailingStreet, Phone, MobilePhone, FacebookId__c, ProfilePictureLink__c, Gender__c, AccountId, TefAccount__c 
 	                 FROM Contact
 	                 WHERE FacebookId__c = :fbid];
 	             
@@ -14,21 +14,7 @@ public class PDIContactsManager {
 
 
     public Contact updateContact(FacebookUser fb) {
-    	String fbid = fb.id;
-    	
-    	Contact c = this.retrieveContact(fb.id);
-
-        this.fillContactFields(c, fb);
-        
-        try {
-        	update c;
-        		
-        } catch (DmlException e) {
-        	this.insertContact(fb);
-        }
-        
-
-        return c;
+    	return null;
     }
 
 
@@ -36,7 +22,7 @@ public class PDIContactsManager {
     	Contact c = new Contact();
     	
 	    this.fillContactFields(c, fb);
-	    
+
 	    try {
 	    	insert c;
 	    	
